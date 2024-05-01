@@ -1,4 +1,4 @@
-//memory exchange
+//memory exchange (internal to internal)
 #include<xc.h>
 #include<stdio..h>
 #include<stdlib.h>
@@ -24,7 +24,7 @@ void main(void){
     return;
     
 }
-//memory transfer
+//memory transfer (internal to external)
 
 #include<xc.h>
 #include<stdio.h>
