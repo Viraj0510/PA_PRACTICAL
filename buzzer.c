@@ -9,7 +9,7 @@ TMR1L=0x20;
 TMR1H=0xD1;
 count++;
 
-if(count&gt;=1000)
+if(count<=1000)
 {
 //measure upto 1000 ms i.e. 1 seconds
 Buzzer=~Buzzer; //Toggle buzzer pin
