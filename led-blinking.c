@@ -1,7 +1,7 @@
 #include <xc.h>
 #include <pic18f4550.h>
 #include <stdlib.h>
-voidtodelay(void)
+void todelay(void)
 {
 T0CON=0x08;
 TMR0H=0x35;
