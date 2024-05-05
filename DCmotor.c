@@ -1,10 +1,10 @@
 #include <xc.h>
-#pragma config OSC = HS //Oscillator Selection
+
 #pragma config WDT = OFF //Disable Watchdog timer
 #pragma config LVP = OFF //Disable Low Voltage Programming
 #pragma config PBADEN = OFF //Disable PORTB Analog inputs
 void myMsDelay (unsigned int time) // Definition of delay
-subroutine
+//subroutine
 {
 unsigned int i, j;
 for (i = 0; i < time; i++) // Loop for i time
@@ -12,9 +12,7 @@ for (j = 0; j < 275; j++);
 // Calibrated for a 1 ms delay in MPLAB
 }
 void main()
-{
-IN1)
-IN2)
+{//IN1)IN2)
 TRISCbits.TRISC0 = 0 ; // Set PORTC, RC6 as output (DCM
 TRISCbits.TRISC1 = 0 ; // Set PORTC, RC6 as output (DCM
 TRISCbits.TRISC2 = 0 ; // Set PORTC, RC2 as output (CCP1)
@@ -31,24 +29,24 @@ while(1) // Endless Loop
 CCP1CONbits.DC1B0 = 0;
 CCP1CONbits.DC1B1 = 1;
 CCPR1L = 0x3E;
-myMsDelay(2000);
+myMsDelay(200);
 //
 //
 // Duty Cycle 60%
 CCP1CONbits.DC1B0 = 1;
 CCP1CONbits.DC1B1 = 1;
 CCPR1L = 0x2E;
-myMsDelay(2000);
+myMsDelay(200);
 //
 // Duty Cycle 40%
 CCP1CONbits.DC1B0 = 1;
 CCP1CONbits.DC1B1 = 0;
 CCPR1L = 0x1F;
-myMsDelay(2000);
+myMsDelay(200);
 // Duty Cycle 20%
 CCP1CONbits.DC1B0 = 0;
 CCP1CONbits.DC1B1 = 1;
 CCPR1L = 0x0F;
-myMsDelay(2000);
+myMsDelay(200);
 }
 }
